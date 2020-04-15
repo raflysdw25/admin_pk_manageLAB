@@ -107,13 +107,13 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./peminjaman.html" class="nav-link active">
+                <a href="./peminjaman.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Peminjaman Barang</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./supplier.html" class="nav-link">
+                <a href="./supplier.html" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Supplier Barang</p>
                 </a>
@@ -134,12 +134,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark font-weight-bold">Daftar Peminjaman Barang Laboratorium</h1>
+            <h1 class="m-0 text-dark font-weight-bold">Daftar Supplier</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Laboratorium</a></li>
-              <li class="breadcrumb-item active">Peminjaman Barang</li>
+              <li class="breadcrumb-item active">Supplier Barang</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -155,6 +155,9 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
+                <a href="tambah_supplier.html" class="btn btn-primary">
+                    <i class="fas fa-plus"></i> Tambah Supplier
+                </a>
                 <div class="card-tools">
                   <div class="input-group input-group-smlg" style="width: 300px;">
                     <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
@@ -171,20 +174,20 @@
                   <thead>
                     <tr>
                       <th>No</th>
-                      <th>Kode Barang</th>
-                      <th>Nama Peminjam</th>
-                      <th>Waktu Peminjaman</th>
-                      <th>Waktu Pengembalian</th>
+                      <th>Nama Supplier</th>
+                      <th>Alamat</th>
+                      <th>Telepon</th>
+                      <th>Email</th>
                       <th>Action</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
                       <td>01</td>
-                      <td>AA001</td>
-                      <td>Muhammad Rafly Sadewa</td>
-                      <td>07:50 AM</td>
-                      <td>10:00 AM</td>
+                      <td>PT Sinar Jaya</td>
+                      <td>Jakarta</td>
+                      <td>0251-87771411</td>
+                      <td>sinarjayagroup@gmail.com</td>
                       <td>
                         <button type="button" class="btn btn-info" data-toggle="modal" data-target="#detail-modals">
                           <i class="fas fa-eye"></i>
@@ -196,6 +199,7 @@
                           <i class="fas fa-trash"></i>
                         </a>
                       </td>
+                    </tr>
                   </tbody>
                 </table>
               </div>
@@ -220,51 +224,16 @@
 
     <!-- Modals -->
     <div class="modal fade" id="detail-modals">
-      <div class="modal-dialog modal-lg">
+      <div class="modal-dialog modal-md">
         <div class="modal-content">
           <div class="modal-header">
-            <h4 class="modal-title font-weight-bold">Detail Peminjam</h4>
+            <h4 class="modal-title font-weight-bold">Foto Supplier</h4>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <div class="modal-body">
-            <div class="card">
-              <div class="card-body table-responsive p-0">
-                <table class="table text-nowrap table-bordered">
-                  <tr>
-                    <th>Nama Peminjam</th>
-                    <td>Muhammad Rafly Sadewa</td>
-                  </tr>
-                  <tr>
-                    <th>Kelas Peminjam</th>
-                    <td>TI 6B</td>
-                  </tr>
-                  <tr>
-                    <th>Angkatan</th>
-                    <td>2017</td>
-                  </tr>
-                  <tr>
-                    <th>Alamat</th>
-                    <td>Jl. Panaragan Penggilingan No 07 RT 01 RW 06 Panaragan Bogor Tengah Bogor</td>
-                  </tr>
-                  <tr>
-                    <th>Email</th>
-                    <td>raflysdw25@gmail.com</td>
-                  </tr>
-                  <tr>
-                    <th>No. Telepon</th>
-                    <td>081218860714</td>
-                  </tr>
-                  </tbody>
-                </table>                
-              </div>
-              <div class="card-footer pr-0 my-3">
-                <a href="#" class="btn btn-success">
-                    <i class="fas fa-phone-square"></i> Hubungi Siswa
-                </a>
-              </div>
-            </div>
+          <div class="modal-body text-center">
+            <img src="assets/images/ptsinarjaya.png" alt="Logo PT Sinar Jaya" class="img-fluid">
           </div>
         </div>
         <!-- /.modal-content -->

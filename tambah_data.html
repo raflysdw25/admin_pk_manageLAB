@@ -26,6 +26,9 @@
   <link rel="stylesheet" href="plugins/summernote/summernote-bs4.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+  <!-- Gijgo Library -->
+  <link rel="stylesheet" href="assets/libraries/gijgo/css/gijgo.min.css">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -101,13 +104,13 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./tambah_data.html" class="nav-link">
+                <a href="./tambah_data.html" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tambah Data Barang</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./peminjaman.html" class="nav-link active">
+                <a href="./peminjaman.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Peminjaman Barang</p>
                 </a>
@@ -134,12 +137,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark font-weight-bold">Daftar Peminjaman Barang Laboratorium</h1>
+            <h1 class="m-0 text-dark font-weight-bold">Tambah Barang Laboratorium</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Laboratorium</a></li>
-              <li class="breadcrumb-item active">Peminjaman Barang</li>
+              <li class="breadcrumb-item active">Tambah Barang</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -151,126 +154,70 @@
     <section class="content">
       <div class="container-fluid">
         <!-- /.row -->
-        <div class="row">
-          <div class="col-12">
-            <div class="card">
-              <div class="card-header">
-                <div class="card-tools">
-                  <div class="input-group input-group-smlg" style="width: 300px;">
-                    <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
-
-                    <div class="input-group-append">
-                      <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
+        <form action="#" method="POST">
+            <div class="row">
+                <div class="col-8">
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title">
+                                <i class="fas fa-boxes"></i> Detail Barang
+                            </h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <!-- form start -->
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="id_barang">ID Barang</label>
+                                <input type="number" name="id_barang" class="form-control" id="id_barang" placeholder="Masukkan ID Barang">
+                            </div>
+                            <div class="form-group">
+                                <label for="nama_barang">Nama Barang</label>
+                                <input type="text" name="nama_barang" class="form-control" id="nama_barang" placeholder="Masukkan Nama Barang">
+                            </div>
+                            <div class="form-group">
+                                <label for="jumlah_barang">Jumlah Barang</label>
+                                <input type="number" min="0" class="form-control" name="jumlah_barang" id="jumlah_barang" placeholder="Masukkan Jumlah Barang">
+                            </div>
+                            <div class="form-group">
+                                <label for="spesifikasi_barang">Spesifikasi Barang</label>
+                                <textarea name="spesifikasi_barang" id="spesifikasi_barang" cols="30" rows="10" class="form-control ckeditor"></textarea>
+                            </div>
+                        </div>
+                        <!-- /.card-body -->
                     </div>
-                  </div>
                 </div>
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body table-responsive p-0">
-                <table class="table text-nowrap">
-                  <thead>
-                    <tr>
-                      <th>No</th>
-                      <th>Kode Barang</th>
-                      <th>Nama Peminjam</th>
-                      <th>Waktu Peminjaman</th>
-                      <th>Waktu Pengembalian</th>
-                      <th>Action</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>01</td>
-                      <td>AA001</td>
-                      <td>Muhammad Rafly Sadewa</td>
-                      <td>07:50 AM</td>
-                      <td>10:00 AM</td>
-                      <td>
-                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#detail-modals">
-                          <i class="fas fa-eye"></i>
-                        </button>
-                        <a href="#" class="btn btn-primary">
-                          <i class="fas fa-pencil-alt"></i>
-                        </a>
-                        <a href="#" class="btn btn-danger">
-                          <i class="fas fa-trash"></i>
-                        </a>
-                      </td>
-                  </tbody>
-                </table>
-              </div>
-              <!-- /.card-body -->
-              <div class="card-footer clearfix">
-                <ul class="pagination pagination-sm m-0 float-right">
-                  <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
-                  <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                  <li class="page-item"><a class="page-link" href="#">2</a></li>
-                  <li class="page-item"><a class="page-link" href="#">3</a></li>
-                  <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
-                </ul>
-              </div>
+                <div class="col-4">
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title">
+                                <i class="fas fa-shopping-cart"></i> Detail Penerimaan
+                            </h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <!-- form start -->
+
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="Tahun">Tanggal</label>
+                                <input type="text" class="form-control datepicker" id="Tahun" placeholder="Pilih tanggal">
+                            </div>
+                            <div class="form-group">
+                                <label for="supplier_barang">Supplier</label>
+                                <input type="text" class="form-control" id="supplier_barang" placeholder="Supplier Barang">
+                            </div>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                </div>
+                <div class="p-2">
+                    <button type="submit" class="btn btn-success btn-lg">Simpan</button>
+                    <a href="index.html" class="btn btn-danger btn-lg">Batal</a>
+                </div>
             </div>
-            <!-- /.card -->
-          </div>
-        </div>
-        
+        </form>
       </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->
-
-    <!-- Modals -->
-    <div class="modal fade" id="detail-modals">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title font-weight-bold">Detail Peminjam</h4>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="card">
-              <div class="card-body table-responsive p-0">
-                <table class="table text-nowrap table-bordered">
-                  <tr>
-                    <th>Nama Peminjam</th>
-                    <td>Muhammad Rafly Sadewa</td>
-                  </tr>
-                  <tr>
-                    <th>Kelas Peminjam</th>
-                    <td>TI 6B</td>
-                  </tr>
-                  <tr>
-                    <th>Angkatan</th>
-                    <td>2017</td>
-                  </tr>
-                  <tr>
-                    <th>Alamat</th>
-                    <td>Jl. Panaragan Penggilingan No 07 RT 01 RW 06 Panaragan Bogor Tengah Bogor</td>
-                  </tr>
-                  <tr>
-                    <th>Email</th>
-                    <td>raflysdw25@gmail.com</td>
-                  </tr>
-                  <tr>
-                    <th>No. Telepon</th>
-                    <td>081218860714</td>
-                  </tr>
-                  </tbody>
-                </table>                
-              </div>
-              <div class="card-footer pr-0 my-3">
-                <a href="#" class="btn btn-success">
-                    <i class="fas fa-phone-square"></i> Hubungi Siswa
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- /.modal-content -->
-      </div>
-      <!-- /.modal-dialog -->
-    </div>
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
@@ -320,5 +267,29 @@
 <script src="dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
+<script src="https://cdn.ckeditor.com/ckeditor5/17.0.0/classic/ckeditor.js"></script>
+<script>
+     ClassicEditor
+        .create( document.querySelector( '.ckeditor' ) )
+        .then( editor => {
+                console.log( editor );
+        } )
+        .catch( error => {
+                console.error( error );
+        } );
+</script>
+<script src="assets/libraries/gijgo/js/gijgo.min.js"></script>
+<!-- Load gijgo with JQuery -->
+<script>
+    $(document).ready(function(){
+        $('.datepicker').datepicker({
+            format: 'yyyy-mm-dd',
+            uiLibrary:'bootstrap4',
+            icons:{
+                rightIcon : '<img src="assets/images/ic_date.png" />'
+            }
+        });
+    });
+</script>
 </body>
 </html>
