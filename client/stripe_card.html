@@ -73,13 +73,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./index.html" class="nav-link">
+                <a href="./index.html" class="nav-link active">
                   <i class="fas fa-home nav-icon"></i>
                   <p>Beranda</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./panduan.html" class="nav-link active">
+                <a href="./panduan.html" class="nav-link">
                   <i class="fas fa-book nav-icon"></i>
                   <p>Panduan</p>
                 </a>
@@ -100,7 +100,9 @@
       <div class="container-fluid">
         <div class="row my-4">
           <div class="col-12 text-center">
-            <h1 class="m-0 text-dark font-weight-bold">Laman Panduan Peminjaman Alat Laboratorium</h1>
+            <div class="flat-design m-auto w-25" style="cursor: pointer;">
+                <img src="../assets/images/flatdesign_creditcard.png" alt="" class="img-fluid">
+            </div>
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
@@ -112,30 +114,13 @@
       <div class="container-fluid">
         <!-- /.row -->
         <div class="row">
-          <div class="col-lg-6">
-            <div class="card">
-                <div class="card-header">
-                  <h3 class="m-0 text-dark font-weight-bold">Panduan Peminjaman Alat</h3>
+          <div class="col-12 text-center" >
+            <h4 class="font-weight-lighter">Silahkan <em>swipe</em> KTM atau ATM anda pada mesin yang telah disiapkan </h4>
+            <form action="#" class="mt-4">
+                <div class="form-group">
+                    <input type="text" name="nama_mahasiswa" class="form-control form-control-lg w-50 m-auto" placeholder="Nama anda" readonly autofocus>
                 </div>
-                <!-- /.card-header -->
-                <div class="card-body m-auto py-4">
-                    <img src="../assets/images/pinjam_alat.png" alt="">
-                </div>
-                <!-- /.card-body -->
-            </div>
-              <!-- /.card -->
-          </div>
-          <div class="col-lg-6">
-            <div class="card">
-                <div class="card-header">
-                  <h3 class="m-0 text-dark font-weight-bold">Panduan Pengembalian Alat</h3>
-                </div>
-                <!-- /.card-header -->
-                <div class="card-body m-auto py-4">
-                    <img src="../assets/images/pengembalian_alat.png" alt="">
-                </div>
-                <!-- /.card-body -->
-            </div>
+            </form>
           </div>
         </div>   
       </div><!-- /.container-fluid -->
@@ -192,5 +177,13 @@
 <script src="../dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../dist/js/demo.js"></script>
+
+<script>
+    const flatDesign = document.querySelector(".flat-design");
+
+    flatDesign.addEventListener('click',(event) =>{
+      window.location.href = './card-data.html';
+    })
+</script>
 </body>
 </html>

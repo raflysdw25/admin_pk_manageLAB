@@ -73,13 +73,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./index.html" class="nav-link">
+                <a href="./index.html" class="nav-link active">
                   <i class="fas fa-home nav-icon"></i>
                   <p>Beranda</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./panduan.html" class="nav-link active">
+                <a href="./panduan.html" class="nav-link">
                   <i class="fas fa-book nav-icon"></i>
                   <p>Panduan</p>
                 </a>
@@ -100,7 +100,7 @@
       <div class="container-fluid">
         <div class="row my-4">
           <div class="col-12 text-center">
-            <h1 class="m-0 text-dark font-weight-bold">Laman Panduan Peminjaman Alat Laboratorium</h1>
+            <h1 class="m-0 text-dark font-weight-bold">Konfirmasi Peminjaman</h1>
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
@@ -110,34 +110,86 @@
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
-        <!-- /.row -->
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="card">
-                <div class="card-header">
-                  <h3 class="m-0 text-dark font-weight-bold">Panduan Peminjaman Alat</h3>
+        <div class="card w-100">
+            <div class="card-body">
+                <!-- /.row -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <table class="table table-bordered">
+                            <tr>
+                                <th>Nama</th>
+                                <td>Muhammad Rafly Sadewa</td>
+                            </tr>
+                            <tr>
+                                <th>Nomor Telepon</th>
+                                <td>081218860714</td>
+                            </tr>
+                            <tr>
+                                <th>Keperluan</th>
+                                <td>KBM</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-md-6">
+                    <table class="table table-borderless">
+                        <tr>
+                            <th>Ruangan</th>
+                            <td>AA301</td>
+                        </tr>
+                        <tr>
+                            <th>Dosen</th>
+                            <td>Pak Budi</td>
+                        </tr>
+                        <tr>
+                            <th>Waktu</th>
+                            <td>08.00 - 11.00</td>
+                        </tr>
+                    </table>
+                    </div>
                 </div>
-                <!-- /.card-header -->
-                <div class="card-body m-auto py-4">
-                    <img src="../assets/images/pinjam_alat.png" alt="">
-                </div>
-                <!-- /.card-body -->
+                <div class="row">
+                    <div class="col-12">
+                        <table class="table mt-4">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>No</th>
+                                    <th>Kode Barang</th>
+                                    <th>Nama Barang</th>
+                                    <th>Jenis Barang</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>AA001</td>
+                                    <td>View Sonic</td>
+                                    <td>Proyektor</td>
+                                    <td>
+                                        <a href="#" class="btn btn-danger btn-sm">
+                                            <i class="fas fa-trash alt"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>AA002</td>
+                                    <td>Kabel Terminal</td>
+                                    <td>Kabel</td>
+                                    <td>
+                                        <a href="#" class="btn btn-danger btn-sm">
+                                            <i class="fas fa-trash alt"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <a href="success.html" class="mt-2 btn btn-primary btn-block">PINJAM ALAT</a>
+                    </div>
+                </div>  
             </div>
-              <!-- /.card -->
-          </div>
-          <div class="col-lg-6">
-            <div class="card">
-                <div class="card-header">
-                  <h3 class="m-0 text-dark font-weight-bold">Panduan Pengembalian Alat</h3>
-                </div>
-                <!-- /.card-header -->
-                <div class="card-body m-auto py-4">
-                    <img src="../assets/images/pengembalian_alat.png" alt="">
-                </div>
-                <!-- /.card-body -->
-            </div>
-          </div>
-        </div>   
+        </div> 
       </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->
