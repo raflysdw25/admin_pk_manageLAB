@@ -75,13 +75,13 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="../index.html" class="nav-link">
+                                    <a href="./index.html" class="nav-link active">
                                         <i class="fas fa-home nav-icon"></i>
                                         <p>Beranda</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="./panduan.html" class="nav-link active">
+                                    <a href="./panduan.html" class="nav-link">
                                         <i class="fas fa-book nav-icon"></i>
                                         <p>Panduan</p>
                                     </a>
@@ -102,7 +102,7 @@
                 <div class="container-fluid">
                     <div class="row my-4">
                         <div class="col-12 text-center">
-                            <h1 class="m-0 text-dark font-weight-bold">Laman Panduan Peminjaman Alat Laboratorium</h1>
+                            <h1 class="m-0 text-dark font-weight-bold">Konfirmasi Pengembalian</h1>
                         </div>
                         <!-- /.col -->
                     </div>
@@ -114,32 +114,84 @@
 
             <!-- Main content -->
             <section class="content">
-                <div class="container-fluid">
-                    <!-- /.row -->
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h3 class="m-0 text-dark font-weight-bold">Panduan Peminjaman Alat</h3>
+                <div class="container">
+                    <div class="card w-100">
+                        <div class="card-body">
+                            <!-- /.row -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <table class="table table-borderless">
+                                        <tr>
+                                            <th>Nama</th>
+                                            <td>Muhammad Rafly Sadewa</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Nomor Telepon</th>
+                                            <td>081218860714</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Keperluan</th>
+                                            <td>KBM</td>
+                                        </tr>
+                                    </table>
                                 </div>
-                                <!-- /.card-header -->
-                                <div class="card-body m-auto py-4">
-                                    <img src="../assets/images/pinjam_alat.png" alt="">
+                                <div class="col-md-6">
+                                    <table class="table table-borderless">
+                                        <tr>
+                                            <th>Ruangan</th>
+                                            <td>AA301</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Dosen</th>
+                                            <td>Pak Budi</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Waktu</th>
+                                            <td>08.00 - 11.00</td>
+                                        </tr>
+                                    </table>
                                 </div>
-                                <!-- /.card-body -->
                             </div>
-                            <!-- /.card -->
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h3 class="m-0 text-dark font-weight-bold">Panduan Pengembalian Alat</h3>
+                            <div class="row">
+                                <div class="col-12">
+                                    <table class="table mt-4">
+                                        <thead class="thead-dark">
+                                            <tr>
+                                                <th>No</th>
+                                                <th>Kode Barang</th>
+                                                <th>Nama Barang</th>
+                                                <th>Jenis Barang</th>
+                                                <th>Verfikasi Barang</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>AA001</td>
+                                                <td>View Sonic</td>
+                                                <td>Proyektor</td>
+                                                <td>
+                                                    <a href="#" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-default">
+                                                        Konfirmasi Pengembalian
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>AA002</td>
+                                                <td>Kabel Terminal</td>
+                                                <td>Kabel</td>
+                                                <td>
+                                                    <a href="#" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-default">
+                                                      Konfirmasi Pengembalian
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <a href="success_kembali.html" class="mt-2 btn btn-primary btn-block">KEMBALIKAN ALAT</a>
                                 </div>
-                                <!-- /.card-header -->
-                                <div class="card-body m-auto py-4">
-                                    <img src="../assets/images/pengembalian_alat.png" alt="">
-                                </div>
-                                <!-- /.card-body -->
                             </div>
                         </div>
                     </div>
@@ -162,6 +214,39 @@
         <!-- /.control-sidebar -->
     </div>
     <!-- ./wrapper -->
+
+    <div class="modal fade" id="modal-default">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Konfirmasi Pengembalian</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="form-group">
+                            <label for="" class="form-label">Barcode Barang</label>
+                            <input type="text" class="form-control" name="barcode">
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="form-label">Status Barcode</label>
+                            <p>Silahkan Scan Barcode Barang</p>
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Konfirmasi</button>
+                </div>
+                </form>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
 
     <!-- jQuery -->
     <script src="../plugins/jquery/jquery.min.js"></script>
